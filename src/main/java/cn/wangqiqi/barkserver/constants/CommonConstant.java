@@ -15,4 +15,7 @@ public class CommonConstant {
     public static final String JIANLAI_BOOK_ID = "672340";
     public static final String JIANLAI_ICON_URL = "https://static.zongheng.com/upload/cover/30/93/309398098f69f213f12b55ccac40ffac1698936785435.jpeg";
     public static final String JIANLAI_TITLE = "剑来更新小助手";
+
+    public static final String DEFAULT_USERNAME = "admin";
+    public static final String DEFAULT_PASSWORD = "12345678";
 }
