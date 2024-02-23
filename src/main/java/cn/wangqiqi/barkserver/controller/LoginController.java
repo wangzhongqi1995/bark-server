@@ -8,11 +8,20 @@ import cn.wangqiqi.barkserver.domain.R;
 import cn.wangqiqi.barkserver.domain.dto.LoginDTO;
 import cn.wangqiqi.barkserver.domain.vo.LoginResVO;
 import cn.wangqiqi.barkserver.domain.vo.UserInfoVO;
+import cn.wangqiqi.barkserver.entity.Student;
+import cn.wangqiqi.barkserver.mapper.StudentMapper;
+import com.baomidou.mybatisplus.core.toolkit.Wrappers;
+import jakarta.annotation.Resource;
 import org.springframework.web.bind.annotation.*;
+
+import java.sql.Wrapper;
+import java.util.List;
 
 @RestController
 @RequestMapping("/users")
 public class LoginController {
+    @Resource
+    private StudentMapper studentMapper;
 
     @PostMapping("/login")
     public R<LoginResVO> login(@RequestBody LoginDTO loginDTO) {
@@ -25,5 +34,10 @@ public class LoginController {
     @GetMapping("/info")
     public R<UserInfoVO> info() {
         return R.ok(UserInfoVO.builder().username(CommonConstant.DEFAULT_USERNAME).roles(CollUtil.newArrayList(CommonConstant.DEFAULT_USERNAME)).build());
+    }
+
+    @GetMapping("test")
+    public R<List<Student>> test() {
+        return R.ok(studentMapper.selectList(Wrappers.lambdaQuery()));
     }
 }
