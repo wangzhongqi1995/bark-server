@@ -1,11 +1,12 @@
-package cn.wangqiqi.barkserver.service;
+package cn.wangqiqi.barkserver.service.impl;
 
 import cn.hutool.core.util.StrUtil;
-import cn.wangqiqi.barkserver.domain.PageQuery;
-import cn.wangqiqi.barkserver.domain.TableDataInfo;
+import cn.wangqiqi.barkserver.domain.core.PageQuery;
+import cn.wangqiqi.barkserver.domain.core.TableDataInfo;
 import cn.wangqiqi.barkserver.domain.dto.BarkInfoQueryParamDTO;
 import cn.wangqiqi.barkserver.entity.BarkInfo;
 import cn.wangqiqi.barkserver.mapper.BarkInfoMapper;
+import cn.wangqiqi.barkserver.service.IBarkInfoService;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;

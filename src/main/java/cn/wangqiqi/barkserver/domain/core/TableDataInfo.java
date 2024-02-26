@@ -1,4 +1,4 @@
-package cn.wangqiqi.barkserver.domain;
+package cn.wangqiqi.barkserver.domain.core;
 
 import cn.wangqiqi.barkserver.constants.HttpStatus;
 import com.baomidou.mybatisplus.core.metadata.IPage;

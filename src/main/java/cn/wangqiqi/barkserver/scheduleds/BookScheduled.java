@@ -13,16 +13,16 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
-@Component
 @Slf4j
+@Component("bookScheduled")
 public class BookScheduled {
     @Resource
     private BookClient bookClient;
     @Resource
     private BarkClient barkClient;
 
-    @Scheduled(cron = "0 0 9-23/2 * * *")
-    public void test() {
+//    @Scheduled(cron = "0 0 9-23/2 * * *")
+    public void sendBark() {
         // 从纵横查询接口
         BookRes bookRes = bookClient.getLastSimpleChapterInfo(CommonConstant.JIANLAI_BOOK_ID);
         if (ObjectUtil.notEqual(bookRes.getCode(), CommonConstant.ZONGHENG_RES_SUCCESS_CODE)) {

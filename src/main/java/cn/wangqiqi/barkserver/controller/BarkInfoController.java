@@ -1,9 +1,9 @@
 package cn.wangqiqi.barkserver.controller;
 
 import cn.hutool.core.bean.BeanUtil;
-import cn.wangqiqi.barkserver.domain.PageQuery;
-import cn.wangqiqi.barkserver.domain.R;
-import cn.wangqiqi.barkserver.domain.TableDataInfo;
+import cn.wangqiqi.barkserver.domain.core.PageQuery;
+import cn.wangqiqi.barkserver.domain.core.R;
+import cn.wangqiqi.barkserver.domain.core.TableDataInfo;
 import cn.wangqiqi.barkserver.domain.dto.BarkInfoCreateUpdateDTO;
 import cn.wangqiqi.barkserver.domain.dto.BarkInfoQueryParamDTO;
 import cn.wangqiqi.barkserver.entity.BarkInfo;

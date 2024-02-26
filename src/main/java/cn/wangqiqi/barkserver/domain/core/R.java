@@ -1,4 +1,4 @@
-package cn.wangqiqi.barkserver.domain;
+package cn.wangqiqi.barkserver.domain.core;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
